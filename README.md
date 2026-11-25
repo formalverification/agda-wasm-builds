@@ -11,6 +11,7 @@ a browser or under a WASI runtime such as wasmtime.
 | Release | Agda | Language server | What was built, and how |
 |---|---|---|---|
 | [`agda-2.9.0-da66a8c-als-8`][r1] | 2.9.0, unreleased (agda/agda `da66a8c`, the `nightly` of 2026-10-05) | v8, with two patches for Agda 2.9.0 | [`agda-2.9.0-da66a8c-als-8/`](agda-2.9.0-da66a8c-als-8/) |
+| [`agda-2.9.0-da046d6-als-11`][r2] | 2.9.0, the release (agda/agda's tag `v2.9.0`, `da046d6`, 2026-11-13) | v11, its first release for Agda 2.9.0, with two patches for the WASI build | [`agda-2.9.0-da046d6-als-11/`](agda-2.9.0-da046d6-als-11/) |
 
 A release is named `agda-<Agda version>-<Agda commit>-als-<server
 version>` and does not change once published: a new build is a new
@@ -24,8 +25,8 @@ Pin each file by its URL and by its hash in `SHA256SUMS`, for example in a
 Nix flake:
 
     pkgs.fetchurl {
-      url = "https://github.com/formalverification/agda-wasm-builds/releases/download/agda-2.9.0-da66a8c-als-8/agda.wasm";
-      sha256 = "da2f1efc6b13e0d8b8a69311511c8ed6fbfbc2759bd8ec299004580fcfba1eb1";
+      url = "https://github.com/formalverification/agda-wasm-builds/releases/download/agda-2.9.0-da046d6-als-11/agda.wasm";
+      sha256 = "64ce7ae30de134ff4753cdb7c43a8de1498de666101241b098d9d78789d01155";
     }
 
 If a fetch stops with `hash mismatch in fixed-output derivation`, the file
@@ -41,3 +42,6 @@ The binaries are built from free software only, and each release's
 license texts beside it.  They link GMP, which is distributed under the
 GNU Lesser General Public License, version 3 or later; GMP's source, with
 GHC's two patches to it, is attached to every release.
+
+[r1]: https://github.com/formalverification/agda-wasm-builds/releases/tag/agda-2.9.0-da66a8c-als-8
+[r2]: https://github.com/formalverification/agda-wasm-builds/releases/tag/agda-2.9.0-da046d6-als-11
